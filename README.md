@@ -1,6 +1,6 @@
 # cartolator
 
-Simples script python que efetua leitura e análise de dados de jogadores do Fantasy Game CartolaFC, exportando os dados de jogadores para um arquivo .CSV.
+Simples script python que efetua leitura e análise de dados de jogadores do Fantasy Game CartolaFC, exportando os dados de jogadores para um arquivo .CSV. O script efetua requests HTTP à API REST do CartolaFC (https://api.cartolafc.globo.com).
 
 # Utilização
 
