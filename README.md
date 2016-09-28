@@ -2,7 +2,7 @@
 
 Script python que efetua leitura e análise de dados de jogadores do Fantasy Game CartolaFC, exportando os dados de jogadores para um arquivo .CSV.
 
-# Utilização:
+# Utilização
 
 - Efetue login em cartolafc.globo.com
 - Busque pelo header 'X-GLB-Token' nos GET requests feitos pelo navegador
