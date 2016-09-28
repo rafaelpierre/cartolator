@@ -8,7 +8,6 @@ Simples script python que efetua leitura e análise de dados de jogadores do Fan
 - Busque pelo header 'X-GLB-Token' nos GET requests feitos pelo navegador
 - Copie o token
 - Substitua o texto "SEU_ACCESS_TOKEN" no arquivo cartolator.py pelo seu token de autenticação
-- 
 
 # Dependências
 
