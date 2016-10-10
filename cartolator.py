@@ -7,7 +7,7 @@ r = requests.get("https://api.cartolafc.globo.com/atletas/mercado")
 
 obj = r.json()
 
-
+#configura headers para o request à API de consulta individual de atleta - precisa ser autenticada, então precisamos definir o token de acesso
 headers = {
 	'Accept': 'application/json, text/plain, */*',
 	'Accept-Encoding': 'gzip, deflate, sdch, br',
@@ -23,6 +23,7 @@ headers = {
 
 atletas = []
 
+#lista de scouts individuais dos jogadores que iremos consultar
 scoutList = {"DD", "FS", "GS", "PE", "CV", "CA", "FC", "RB", "A", "FD", "FT", "G", "I", "SG", "DP", "GC", "FF", "PP"}
 
 for atleta in obj['atletas']:
@@ -48,6 +49,7 @@ for atleta in obj['atletas']:
 
 			partida = []
 
+			#definir se o atleta joga em casa ou não
 			if atleta["clube_id"] == atleta["partida"]["clube_casa_id"]:
 				#clube joga em casa
 				atletaInfo["joga_casa"] = 1
@@ -67,6 +69,7 @@ for atleta in obj['atletas']:
 #escreve CSV contendo os atletas, medias e desvios padrao
 
 with open('cartolator.csv', 'w') as csvfile:
+    #define colunas do cabecalho
     fieldnames = ["apelido", "atleta_id", "jogos_num", "posicao_id", "media", "desvio_padrao"]
 
     for scout in scoutList:
@@ -80,9 +83,6 @@ with open('cartolator.csv', 'w') as csvfile:
 
     print(atletas)
     writer.writeheader()
-    #writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'})
-    #writer.writerow({'first_name': 'Lovely', 'last_name': 'Spam'})
-    #writer.writerow({'first_name': 'Wonderful', 'last_name': 'Spam'})
 
     for atleta in atletas:
     	writer.writerow(atleta)
