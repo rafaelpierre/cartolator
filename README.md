@@ -4,9 +4,11 @@ Simples script python que efetua leitura e análise de dados e scouts de jogador
 
 - Últimas 10 pontuações de todos os jogadores cujo status é "Provável" para a próxima rodada
 - Pontuação média e desvio padrão destes jogadores
+- Quantidade de jogos
 - Scouts básicos
 - Scouts de ataque (gols, finalizações, etc)
 - Scouts de defesa (roubadas de bola, defesas, etc)
+- Posição na tabela do time que joga em casa e do time visitante
 
 O intuito é utilizar estes dados para analisar o desempenho de cada jogador e auxiliar a montar o seu time, com base em indicadores como pontuação média, desvio padrão, gols por partida, passes, assistências, etc...
 
